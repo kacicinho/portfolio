@@ -1,23 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import CardList from './components/CardList';
 
 function App() {
+  const cards = [
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 3' },
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 3' },
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 3' },
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 3' },
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 3' },
+    { title: 'Card 1', description: 'This is card 1' },
+    { title: 'Card 2', description: 'This is card 2' },
+    { title: 'Card 3', description: 'This is card 10' },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar/>
+      <h3> Notions </h3>
+      <CardList cards={cards}/>
+      <h3> Projects </h3>
+      <CardList cards={cards}/>
+      <h3> Achievements or certifications </h3>
+      <CardList cards={cards}/>
     </div>
   );
 }
